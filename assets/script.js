@@ -34,8 +34,8 @@ let displayForcast = function (data, searchTerm) {
     let currentTempEl = document.createElement('span');
     currentTempEl.innerHTML = "<h6>Temperature: </h6>" + temp + "℉";
 
-    let currentWeatherEl = document.createElement('span');
-    currentWeatherEl.innerHTML = "<img src=" + iconUrl + ">";
+    let currentWeatherEl = document.createElement('img');
+    currentWeatherEl.setAttribute("src", iconUrl);
 
     let currentHumidityEl = document.createElement('span');
     currentHumidityEl.innerHTML = "<h6>Humidity: </h6>" + humidity + "%";
@@ -45,7 +45,7 @@ let displayForcast = function (data, searchTerm) {
 
 
     weatherContainerEl.appendChild(currentDateEl);
-    weatherContainerEl.appendChild(currentWeatherEl);
+    currentDateEl.appendChild(currentWeatherEl);
     weatherContainerEl.appendChild(currentTempEl);
     weatherContainerEl.appendChild(currentHumidityEl);
     weatherContainerEl.appendChild(currentWindEl);
