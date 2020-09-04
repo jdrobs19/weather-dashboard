@@ -3,7 +3,7 @@ let userFormEl = document.querySelector("#user-form");
 let cityInputEl = document.querySelector("#city");
 let weatherContainerEl = document.querySelector("#weather-container");
 let citySearchTerm = document.querySelector("#city-searched")
-let fiveDay = document.querySelector("#five-day");
+let fiveDay = document.querySelector("#five-day-cards");
 
 let getForcast = function (city) {
 
@@ -50,15 +50,24 @@ let displayForcast = function (data, searchTerm) {
     weatherContainerEl.appendChild(currentHumidityEl);
     weatherContainerEl.appendChild(currentWindEl);
 
-        for(let i = 1; i < 6; i++){
+        for(let i = 2; i < 40; i+=8){
             let forcastObject = {
                 forcastDate: moment(data.list[i].dt_txt).format('L'),
                 forcastTemp: Math.floor(data.list[i].main.temp) + "℉",
                 forcastWeather: data.list[i].weather[0].icon,
                 forcastHumidity: data.list[i].main.humidity + "%",
             };
+
             console.log(forcastObject);
+            let fiveDayEl = document.createElement('div');
+    fiveDayEl.setAttribute("class", "card-body");
+    fiveDayEl.textContent = forcastObject;
+
+    fiveDay.appendChild(fiveDayEl);
     };
+    
+    
+
 };
 
 let formSubmitHandler = function (event) {
