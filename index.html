@@ -27,23 +27,25 @@
                         <input name="city" id="city" type="text" autofocus="true" class="form-input" />
                         <button type="submit" class="Searchbtn"><i class="fa fa-search"></i></button>
                     </form>
-                    <!--append child recent here-->
+                    <div id="search-history">
+
+                    </div><!--append child recent here-->
                 </div>
             </div>
             <div class="col-lg-8">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div id="city-searched">
-
+                    <div class="row-fluid">
+                        <div id="display-city">
+                            <h3 id="city-searched"></h3>
                         </div>
                         <div id="weather-container">
 
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="five-day" class="card">
+                    <div class="row-fluid">
+                        <div id="five-day">
                             <div id="five-day-header"></div>
-                            <div id="five-day-cards">
+                            <div id="five-day-cards" class="card-deck justify-space-between">
 
                             </div>
                         </div>
