@@ -110,9 +110,5 @@ let saveSearch = function(){
     }
 };
 
-let recentClickHandler = function(event){
-    let recentCity = event.target.getAttribute("data-search");
-    
-};
 
 userFormEl.addEventListener("submit", formSubmitHandler);

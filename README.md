@@ -19,6 +19,7 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 ## Deployed URL
-
+https://jdrobs19.github.io/weather-dashboard/
 
 ## Application Screenshots
+![Weather Dashboard](https://user-images.githubusercontent.com/67448100/92332874-fa3a0880-f03d-11ea-828f-3a99ce16bdca.gif)
